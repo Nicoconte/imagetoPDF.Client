@@ -27,16 +27,18 @@ const Main = () => {
         }
 
         const createSession = () => {
-            if (!StorageService.exists("session-id")) {
-                SessionService.start().then(res => {
-                    let sessionID = res.SessionID;
-                    StorageService.set("session-id", sessionID);
-                });
-            } else {
-                checkSessionIsAlive();
-            }
+            SessionService.start().then(res => {
+                let sessionID = res.SessionID;
+                StorageService.set("session-id", sessionID);
+            });
         }
-        createSession();
+
+        if (!StorageService.exists("session-id")){
+            createSession();
+        } else {
+            checkSessionIsAlive();
+        }
+
     }, [])
 
     return (
