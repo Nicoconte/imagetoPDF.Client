@@ -5,7 +5,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className='footer-container'>
-            <span className='text-center'>Doom eternal footer</span>
+            <span>Made with ❤️ by Nicolas Conte</span>
         </div>
     );
 }
