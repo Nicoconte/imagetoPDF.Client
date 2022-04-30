@@ -5,7 +5,7 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <div className='navbar-container'>
-            <h1>I live in Spain but the s is silent</h1>
+            <h3>I live in Spain but the s is silent</h3>
         </div>
     );
 }

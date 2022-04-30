@@ -2,10 +2,15 @@ import React from "react";
 
 import './PDF.css'
 
+import ConvertPDFButton from "./convert-pdf-button";
+
+import FileUploaderDragDrop from '../core/shared/file-uploader-drag-drop'
+
 const PDF = () => {
     return (
         <div className="pdf-container">
-            <h1>HAHA pdf chad</h1>
+            <FileUploaderDragDrop />
+            <ConvertPDFButton />
         </div>
     );
 };

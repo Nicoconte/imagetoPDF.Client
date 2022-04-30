@@ -1,0 +1,19 @@
+.file-uploader-drag-drop-container {
+    width: 80%;
+    height: 70%;
+    border:1px solid black;
+    margin-top:20px;
+}
+
+.file-uploader-drag-drop-container label {
+    height: 100%;
+    font-size:30px;    
+}
+ 
+.file-uploader-drag-drop-container span {
+    font-size:25px;
+}
+
+.file-uploader-drag-drop-container svg {
+    margin-left:50px;
+}
