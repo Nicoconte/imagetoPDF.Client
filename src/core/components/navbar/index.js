@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Navbar.css'
 
-import EndSessionButton from '../../../sessions/end-session-button/index'
+import EndSessionButton from '../../../sessions/components/end-session-button'
 
 const Navbar = () => {
     return (

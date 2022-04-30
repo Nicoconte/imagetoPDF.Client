@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 
-import SessionService from '../../core/services/sessionService';
-import StorageService from "../../core/services/storageService";
+import SessionService from '../../services/sessionService';
+import StorageService from "../../../core/services/storageService";
 
 const EndSessionButton = () => {
 

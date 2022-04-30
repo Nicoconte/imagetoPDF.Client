@@ -1,6 +1,6 @@
-import API from "./apiConfig";
+import API from "../../core/services/apiConfig";
 
-import StorageService from './storageService';
+import StorageService from '../../core/services/storageService';
 
 const SessionService = {
     start: async() => {

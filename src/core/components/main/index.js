@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 
 import './Main.css';
 
-import PDF from '../../../pdf/index'
-import Images from '../../../images/index'
+import PDFContainer from '../../../pdf/components/pdf-container/index'
+import ImagesContainer from '../../../images/components/images-container/index'
 
-import SessionService from '../../services/sessionService'
+import SessionService from '../../../sessions/services/sessionService'
 import StorageService from '../../services/storageService'
 
 const Main = () => {
@@ -43,8 +43,8 @@ const Main = () => {
 
     return (
         <div className='main-container'>
-            <PDF />
-            <Images />
+            <PDFContainer />
+            <ImagesContainer />
         </div>
     );
 }

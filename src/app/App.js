@@ -2,9 +2,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import Main from './core/shared/main';
-import Footer from './core/shared/footer';
-import Navbar from './core/shared/navbar';
+import Main from '../core/components/main';
+import Footer from '../core/components/footer';
+import Navbar from '../core/components/navbar';
 
 function App() {
   return (
