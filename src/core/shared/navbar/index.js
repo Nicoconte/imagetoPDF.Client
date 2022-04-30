@@ -2,10 +2,12 @@ import React from 'react';
 
 import './Navbar.css'
 
+import EndSessionButton from '../../../sessions/end-session-button/index'
+
 const Navbar = () => {
     return (
         <div className='navbar-container'>
-            <h3>I live in Spain but the s is silent</h3>
+            <EndSessionButton />
         </div>
     );
 }

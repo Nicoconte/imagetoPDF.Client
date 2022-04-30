@@ -1,3 +1,5 @@
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Button } from "react-bootstrap";
 import './ConvertPDFButton.css';
@@ -10,7 +12,7 @@ const ConvertPDFButton = () => {
                 className="w-100 btn-danger text-white text-center"
                 size="lg"
             >
-                Convert to PDF
+                <FontAwesomeIcon icon={faFilePdf} /> Convert to PDF
             </Button>
         </div>
     );
