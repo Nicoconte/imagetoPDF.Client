@@ -1,11 +1,11 @@
 .image-preview-item-container {
-    width: 250px;
-    height: 350px;
+    width: 200px;
+    height: 300px;
     border-radius: 8px;
     border:1px solid black;
     position: relative;
     float:left;
-    margin-left: 40px;   
+    margin-left: 30px;   
     margin-top: 15px; 
 }
 

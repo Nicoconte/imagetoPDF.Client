@@ -1,0 +1,12 @@
+.images-count-container {
+    position: absolute;
+    top: 150px;
+    right: 480px;
+}
+
+.images-count-container button {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

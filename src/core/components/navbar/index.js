@@ -2,12 +2,12 @@ import React from 'react';
 
 import './Navbar.css'
 
-import EndSessionButton from '../../../sessions/components/end-session-button'
+import SessionStatus from '../../../sessions/components/session-status';
 
 const Navbar = () => {
     return (
         <div className='navbar-container'>
-            <EndSessionButton />
+            <SessionStatus />
         </div>
     );
 }

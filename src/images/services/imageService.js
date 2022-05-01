@@ -21,6 +21,15 @@ const ImageService = {
         })
 
         return response.data;
+    },
+    deleteAll: async() => {
+        let response = await API.image.delete("/image", {
+            headers: {
+                "session-key": StorageService.get("session-id")
+            }
+        })
+
+        return response.data;        
     }
 }
 

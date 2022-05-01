@@ -38,6 +38,8 @@ const SessionProvider = (props) => {
                         }                        
                     });
                 } 
+
+                setSessionStatus(r.Status);
             });             
         }
     }
@@ -57,12 +59,19 @@ const SessionProvider = (props) => {
         setSessionImages(files);
     }
 
+    const removeAllSessionImages = () => {
+        setSessionImages([]);
+    }
+
     return (
         <SessionContext.Provider value={{
             manageSession,
             sessionImages,
             addSessionImages,
-            removeSessionImages
+            removeSessionImages,
+            removeAllSessionImages,
+            sessionStatus,
+            setSessionStatus,
         }}>
             {props.children}
         </SessionContext.Provider>
