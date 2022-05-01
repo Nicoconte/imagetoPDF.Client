@@ -42,11 +42,27 @@ const SessionProvider = (props) => {
         }
     }
 
+    const removeSessionImages = (imgName) => {
+        let files = [...sessionImages];
+
+        let index = files.findIndex(i => i.name === imgName);
+        
+        files.splice(index, 1);
+
+        setSessionImages([...files]);
+    }
+
+    const addSessionImages = (files) => {
+        files.concat([...sessionImages]);
+        setSessionImages(files);
+    }
+
     return (
         <SessionContext.Provider value={{
             manageSession,
             sessionImages,
-            setSessionImages
+            addSessionImages,
+            removeSessionImages
         }}>
             {props.children}
         </SessionContext.Provider>

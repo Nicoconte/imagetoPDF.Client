@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { faSignOut, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 
 import SessionService from '../../services/sessionService';
@@ -10,7 +10,6 @@ const EndSessionButton = () => {
 
     const handleEndSession = () => {
         SessionService.end().then(r => {
-            console.log(r)
             if (r.Success) {
                 alert(r.Message);
                 StorageService.remove("session-id");
@@ -23,7 +22,7 @@ const EndSessionButton = () => {
     return (
         <div className="end-session-button-container">
             <Button onClick={handleEndSession} className="btn btn-danger text-white ml-4">
-                <FontAwesomeIcon icon={faTimesCircle} /> End session
+                <FontAwesomeIcon icon={faSignOut} />
             </Button> 
         </div>
     )

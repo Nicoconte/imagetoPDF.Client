@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../../../core/context";
 import ImagePreviewItem from "../image-preview-item";
 
 import './ImagesPreview.css';
 
-const ImagesPreview = () => {
+const ImagesPreview = () => {    
     const {
         sessionImages : images
     } = useContext(SessionContext);

@@ -9,7 +9,7 @@ import './FileUploaderDragDrop.css'
 const FileUploaderDragDrop = () => {
 
     const {
-        setSessionImages
+        addSessionImages
     } = useContext(SessionContext);
 
     const fileTypes = ["png", "jpg", "jpeg"];
@@ -36,9 +36,8 @@ const FileUploaderDragDrop = () => {
                         path: path
                     })
                 })
-
-                console.log("A ", files);
-                setSessionImages(files);                
+                
+                addSessionImages(files)
             }
         })
     }

@@ -11,7 +11,7 @@ const ImagePreviewItem = ({
     return (
         <div className="image-preview-item-container">
             <div className="image-preview-item-btn">
-                <DeleteImageButton />
+                <DeleteImageButton imageName={imageName} />
             </div>
             <div className="image-preview-item-img-container">
                 <img src={imagePath} alt={imageName} />
