@@ -1,6 +1,12 @@
 .images-preview-container {
-    width: 95%;
+    width: 91%;
     height: 100%;
     border:1px solid black;
     padding:30px 30px;
+    display: block;
+    overflow: scroll;    
+}
+
+.images-preview-container::-webkit-scrollbar {
+    display: none;
 }

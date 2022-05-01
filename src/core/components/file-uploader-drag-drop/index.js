@@ -1,14 +1,51 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FileUploader } from "react-drag-drop-files";
+import { SessionContext } from '../../context'
+
+import ImageService from '../../../images/services/imageService'
 
 import './FileUploaderDragDrop.css'
 
-import { FileUploader } from "react-drag-drop-files";
-
-
 const FileUploaderDragDrop = () => {
+
+    const {
+        setSessionImages
+    } = useContext(SessionContext);
+
+    const fileTypes = ["png", "jpg", "jpeg"];
+
+    const onFilesUploaded = (filesUploaded) => {
+        let formData = new FormData();
+
+        filesUploaded = [...filesUploaded];
+
+        filesUploaded.forEach(f => {
+            formData.append("images", f);
+        })
+
+        ImageService.upload(formData).then(r => {
+            if (r.success) {
+                let files = []
+
+                r.filename.forEach(path => {
+                    let pathSplitted = path.split("/");
+                    let name = pathSplitted[pathSplitted.length - 1]
+
+                    files.push({
+                        name: name,
+                        path: path
+                    })
+                })
+
+                console.log("A ", files);
+                setSessionImages(files);                
+            }
+        })
+    }
+
     return (
         <div className="file-uploader-drag-drop-container">
-            <FileUploader />
+            <FileUploader handleChange={onFilesUploaded} name="images" types={fileTypes} multiple={true} />
         </div>
     );
 };
