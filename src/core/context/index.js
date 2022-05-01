@@ -8,6 +8,7 @@ const SessionContext = createContext();
 const SessionProvider = (props) => {
     const [sessionStatus, setSessionStatus] = useState(false);
     const [sessionImages, setSessionImages] = useState([]);
+    const [loading, setLoading] = useState(false)
 
     const startNewSession = () => {
         SessionService.start()
@@ -55,16 +56,21 @@ const SessionProvider = (props) => {
     }
 
     const addSessionImages = (files) => {
-        files.concat([...sessionImages]);
-        setSessionImages(files);
+        sessionImages.concat([...files]);
+        let newFiles = sessionImages.concat([...files])
+        setSessionImages(newFiles);
     }
 
     const removeAllSessionImages = () => {
         setSessionImages([]);
     }
 
+    console.log("Loading actual ", loading);
+
     return (
         <SessionContext.Provider value={{
+            setLoading,
+            loading,
             manageSession,
             sessionImages,
             addSessionImages,

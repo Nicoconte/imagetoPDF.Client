@@ -9,37 +9,45 @@ import './FileUploaderDragDrop.css'
 const FileUploaderDragDrop = () => {
 
     const {
-        addSessionImages
+        addSessionImages,
+        setLoading
     } = useContext(SessionContext);
 
     const fileTypes = ["png", "jpg", "jpeg"];
 
-    const onFilesUploaded = (filesUploaded) => {
-        let formData = new FormData();
+    const onFilesUploaded = (filesUploaded) => {        
+        setLoading(true);
 
-        filesUploaded = [...filesUploaded];
+        setTimeout(() => {
+            let formData = new FormData();
 
-        filesUploaded.forEach(f => {
-            formData.append("images", f);
-        })
-
-        ImageService.upload(formData).then(r => {
-            if (r.success) {
-                let files = []
-
-                r.filename.forEach(path => {
-                    let pathSplitted = path.split("/");
-                    let name = pathSplitted[pathSplitted.length - 1]
-
-                    files.push({
-                        name: name,
-                        path: path
+            filesUploaded = [...filesUploaded];
+    
+            filesUploaded.forEach(f => {
+                formData.append("images", f);
+            })
+    
+            ImageService.upload(formData).then(r => {
+                if (r.success) {
+                    let files = []
+    
+                    r.filename.forEach(path => {
+                        let pathSplitted = path.split("/");
+                        let name = pathSplitted[pathSplitted.length - 1]
+    
+                        files.push({
+                            name: name,
+                            path: path
+                        })
                     })
-                })
-                
-                addSessionImages(files)
-            }
-        })
+                    
+                    addSessionImages(files)
+                }
+            })
+    
+            setLoading(false);
+        
+        }, 500)
     }
 
     return (

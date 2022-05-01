@@ -12,19 +12,25 @@ import './DeleteAllImageButton.css'
 const DeleteAllImageButton = () => {
 
     const {
-        removeAllSessionImages
+        removeAllSessionImages,
+        setLoading
     } = useContext(SessionContext)
 
     const handleEndSession = () => {
         if (!window.confirm("Do you want to delete all files?")) return;
 
-        ImageService.deleteAll().then(r => {
-            if (r.Success) {
-                removeAllSessionImages();
-            } else {
-                alert(r.Reason);
-            }
-        })
+        setLoading(true);
+
+        setTimeout(() => {
+            ImageService.deleteAll().then(r => {
+                if (r.Success) {
+                    removeAllSessionImages();
+                } else {
+                    alert(r.Reason);
+                }
+            })
+            setLoading(false);
+        }, 500)
     }
 
     return (
