@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import { createContext, useState } from "react";
 
 import SessionService from "../../sessions/services/sessionService";
@@ -5,10 +7,19 @@ import StorageService from "../services/storageService";
 
 const SessionContext = createContext();
 
+
 const SessionProvider = (props) => {
     const [sessionStatus, setSessionStatus] = useState(false);
     const [sessionImages, setSessionImages] = useState([]);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
+
+    const [pdfNameSwitchState, setpdfNameSwitchState] = useState(false);
+    const [pdfName, setPdfName] = useState(uuidv4());
+
+    const resetPdfConfig = () => {
+        setpdfNameSwitchState(false);
+        setPdfName(uuidv4())
+    }
 
     const startNewSession = () => {
         SessionService.start()
@@ -65,8 +76,6 @@ const SessionProvider = (props) => {
         setSessionImages([]);
     }
 
-    console.log("Loading actual ", loading);
-
     return (
         <SessionContext.Provider value={{
             setLoading,
@@ -78,6 +87,11 @@ const SessionProvider = (props) => {
             removeAllSessionImages,
             sessionStatus,
             setSessionStatus,
+            pdfNameSwitchState,
+            setpdfNameSwitchState,
+            pdfName,
+            setPdfName,
+            resetPdfConfig,
         }}>
             {props.children}
         </SessionContext.Provider>

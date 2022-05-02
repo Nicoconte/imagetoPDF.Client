@@ -1,11 +1,11 @@
 .loading-spinner-container {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 45%;
     z-index: 1000000;
 }
 
 .spinner-border {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }

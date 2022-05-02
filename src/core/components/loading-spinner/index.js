@@ -11,8 +11,9 @@ const LoadingSpinner = () => {
 
     return (
         <div className="loading-spinner-container">
-            {!isLoading && <Spinner animation="border" variant="info" role="status" hidden={true} />}
-            {isLoading && <Spinner animation="border" variant="info" role="status" hidden={false} />}            
+            <Spinner animation="border" variant="danger" role="status" hidden={!isLoading}>
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
         </div>
     )
 }

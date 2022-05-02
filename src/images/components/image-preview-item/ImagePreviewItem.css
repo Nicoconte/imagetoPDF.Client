@@ -2,11 +2,12 @@
     width: 200px;
     height: 300px;
     border-radius: 8px;
-    border:1px solid black;
+    border:1px solid rgb(169, 168, 168);
     position: relative;
     float:left;
     margin-left: 30px;   
-    margin-top: 15px; 
+    margin-top: 15px;
+    box-shadow: 0px 2px 5px rgb(169, 168, 168); 
 }
 
 .image-preview-item-btn {
@@ -28,5 +29,5 @@
     object-fit: cover;
     margin-top:10px;
     border-radius: 3px;
-    border:1px solid black;
+    border:1px solid rgb(169, 168, 168);
 }

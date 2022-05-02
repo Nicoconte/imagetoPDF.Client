@@ -7,6 +7,7 @@ import './ImagesPreview.css';
 
 import DeleteAllImageButton from '../delete-all-image-button/'
 import ImagesCount from "../images-count";
+import PresentationCard from "../../../core/components/presentation-card";
 
 const ImagesPreview = () => {
     const {
@@ -15,9 +16,9 @@ const ImagesPreview = () => {
 
     return (
         <div className="images-preview-container">
-            {!images.length && <h1>No files :C {images.length}</h1>}
-            {images.length && <DeleteAllImageButton />}
-            {images.length && <ImagesCount />}
+            {!images.length && <PresentationCard />}
+            {images.length > 0 && <DeleteAllImageButton />}
+            {images.length > 0 && <ImagesCount />}
             {images.map(img => (
                 <ImagePreviewItem
                     key={img.name}

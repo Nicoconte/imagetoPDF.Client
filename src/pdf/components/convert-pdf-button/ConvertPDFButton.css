@@ -1,5 +1,13 @@
 .convert-pdf-button-container {
     width: 80%;
-    height: 5%;
-    margin-top:30px;
+    height: 10%;
+    margin-top:40px;
+}
+
+.convert-pdf-button-container svg {
+    margin-left: 15px;
+}
+
+.convert-pdf-button-container  button {
+    height: 100%;
 }

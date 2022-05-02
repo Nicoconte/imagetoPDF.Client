@@ -7,12 +7,23 @@
 .file-uploader-drag-drop-container label {
     height: 100%;
     font-size:30px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
- 
+
 .file-uploader-drag-drop-container span {
-    font-size:25px;
+    font-size: 20px;
+    margin-top: 100px
 }
 
 .file-uploader-drag-drop-container svg {
-    margin-left:50px;
+    transform: scale(5.0);
+    margin-top: 100px;
+    margin-left: 33px;
+}
+
+.file-types {
+    display: none;
 }

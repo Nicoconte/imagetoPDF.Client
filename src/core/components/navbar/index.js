@@ -7,7 +7,12 @@ import SessionStatus from '../../../sessions/components/session-status';
 const Navbar = () => {
     return (
         <div className='navbar-container'>
-            <SessionStatus />
+            <div className='navbar-logo'>
+                <h3>ImageToPDF 📁</h3>
+            </div>
+            <div className='navbar-status'>
+                <SessionStatus />
+            </div>
         </div>
     );
 }
