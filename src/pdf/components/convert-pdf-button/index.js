@@ -27,8 +27,6 @@ const ConvertPDFButton = () => {
             return;
         }
 
-        console.log("Nombre ", pdfName);
-
         setLoading(true);
 
         setTimeout(() => {

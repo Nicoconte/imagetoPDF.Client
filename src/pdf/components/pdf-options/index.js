@@ -30,8 +30,6 @@ const PDFOptions = () => {
         setPdfName(e.target.value);
     }
 
-    console.log("Archivo del switch ", pdfNameSwitchState);
-
     return (
         <div className={pdfNameSwitchState ? "pdf-options-container" : "pdf-options-container-reduced" }>
             <Form>
