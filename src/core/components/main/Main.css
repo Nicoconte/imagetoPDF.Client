@@ -1,8 +1,21 @@
 .main-container {
-    width:100%;
-    height:85%;
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 25px 0px;
-    background-color: rgba(205, 205, 205, 0.2);
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 25px 0px;
+  background-color: rgba(205, 205, 205, 0.2);
+}
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .main-container {
+    padding: 30px 30px;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1920px) {
+  .main-container {
+    padding: 30px 50px;
+  }
 }

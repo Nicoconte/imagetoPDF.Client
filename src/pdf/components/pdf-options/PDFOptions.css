@@ -44,3 +44,21 @@
     height: 45px;
     margin-top: 10px; 
 }
+
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .pdf-options-container {
+        height: 12%;
+    }
+}
+
+
+@media (min-width: 1401px) and (max-width: 1920px) {
+    .pdf-options-container {
+        height: 12%;
+    }
+    #pdf-name-textbox {
+        width: 90%;
+        height: 45px;    
+    }
+}

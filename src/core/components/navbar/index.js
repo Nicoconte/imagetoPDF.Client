@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className='navbar-container'>
             <div className='navbar-logo'>
-                <h3>ImageToPDF 📁</h3>
+                <h3>ImageToPDF.IO 📁</h3>
             </div>
             <div className='navbar-status'>
                 <SessionStatus />

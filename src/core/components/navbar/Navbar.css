@@ -30,3 +30,9 @@
     justify-content: flex-end;
     align-items:center;
 }
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .navbar-container h3 {
+        font-size:25px;
+    }
+}
