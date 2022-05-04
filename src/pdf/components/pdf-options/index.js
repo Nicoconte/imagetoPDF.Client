@@ -38,7 +38,7 @@ const PDFOptions = () => {
                 <Form.Check
                     type="switch"
                     id="pdf-default-switch"
-                    label="Set pdf name"
+                    label="Set filename"
                     onChange={handleSwitchState}
                     checked={pdfNameSwitchState}
                 />

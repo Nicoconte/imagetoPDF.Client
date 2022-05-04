@@ -8,7 +8,6 @@ import ImageService from '../../../images/services/imageService'
 const SessionManager = ({ children }) => {
 
     const {
-        sessionImages,
         manageSession
     } = useContext(SessionContext);
 

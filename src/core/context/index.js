@@ -52,7 +52,13 @@ const SessionProvider = (props) => {
                 } 
 
                 setSessionStatus(r.Status);
-            });             
+            })
+            .catch(err => {
+                if (StorageService.exists("session-id")) {
+                    StorageService.remove("session-id");
+                    startNewSession();                
+                }                
+            })             
         }
     }
 

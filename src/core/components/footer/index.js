@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <span>
-                Made with ❤️ by Nicolas Conte
+                Nicolas Conte
                 <a className='text-black' target="_blank" href="https://github.com/Nicoconte/"><FontAwesomeIcon icon={faGithub} /></a>
             </span>
         </div>
