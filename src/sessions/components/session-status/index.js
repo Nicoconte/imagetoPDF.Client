@@ -13,8 +13,7 @@ const SessionStatus = () => {
 
     return (
         <div className="session-status-container">
-            {!sessionStatus && <FontAwesomeIcon icon={faUserCircle} className="text-danger"/>}
-            {sessionStatus  && <FontAwesomeIcon icon={faUserCircle} className="text-success"/>} 
+            <FontAwesomeIcon icon={faUserCircle} className={sessionStatus ? "text-success" : "text-danger"}/>
         </div>
     );
 }

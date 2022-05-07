@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const TRANSACTIONS_BASE_URL = "http://localhost:8080/api/v1";
+const TRANSACTIONS_BASE_URL = "https://imagetopdf-api.herokuapp.com/api/v1";
 
 const API = {
   session: axios.create({

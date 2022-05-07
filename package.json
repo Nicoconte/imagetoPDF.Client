@@ -2,6 +2,7 @@
   "name": "imagetopdf-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Nicoconte.github.io",
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -14,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
+    "gh-pages": "^3.2.3",
     "react": "^18.1.0",
     "react-bootstrap": "^2.3.1",
     "react-dom": "^18.1.0",
@@ -23,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
