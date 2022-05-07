@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Nicoconte/imagetoPDF.Client/static/css/main.59116415.css",
-    "main.js": "/Nicoconte/imagetoPDF.Client/static/js/main.41db59d9.js",
-    "index.html": "/Nicoconte/imagetoPDF.Client/index.html",
-    "main.59116415.css.map": "/Nicoconte/imagetoPDF.Client/static/css/main.59116415.css.map",
-    "main.41db59d9.js.map": "/Nicoconte/imagetoPDF.Client/static/js/main.41db59d9.js.map"
+    "main.css": "/Nicoconte/imagetopdf-client/static/css/main.59116415.css",
+    "main.js": "/Nicoconte/imagetopdf-client/static/js/main.6d59b568.js",
+    "index.html": "/Nicoconte/imagetopdf-client/index.html",
+    "main.59116415.css.map": "/Nicoconte/imagetopdf-client/static/css/main.59116415.css.map",
+    "main.6d59b568.js.map": "/Nicoconte/imagetopdf-client/static/js/main.6d59b568.js.map"
   },
   "entrypoints": [
     "static/css/main.59116415.css",
-    "static/js/main.41db59d9.js"
+    "static/js/main.6d59b568.js"
   ]
 }
