@@ -1,0 +1,20 @@
+.guide-tour-container {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide-tour-container button {
+    border: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+    color:rgb(128, 128, 128);
+    transition: 0.1s ease-in-out;
+}
+
+.guide-tour-container button:hover {
+    background-color: transparent;
+    color:black;
+}
