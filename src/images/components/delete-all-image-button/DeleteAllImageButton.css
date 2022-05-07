@@ -4,8 +4,40 @@
     right: 480px;
 }
 
-@media (min-width: 1401px) and (max-width: 1920px) {
+@media (min-width: 1024px) and (max-width: 1367px) {
     .delete-all-image-button-container {
-        right: 625px;
+        right: 435px;
+    }
+}
+
+
+@media (min-width: 1368px) and (max-width: 1400px) {
+    .delete-all-image-button-container {
+        right: 440px;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1452px) {
+    .delete-all-image-button-container {
+        right: 455px;
+    }
+}
+
+@media (min-width: 1536px) and (max-width: 1602px) {
+    .delete-all-image-button-container {
+        right: 485px;
+    }
+}
+
+@media (min-width: 1603px) and (max-width: 1921px) {
+    .delete-all-image-button-container {
+        right: 520px;
+    }
+}
+
+@media (min-width: 1630px) and (max-width: 1920px) {
+    .delete-all-image-button-container {
+        top: 130px;
+        right: 610px;
     }
 }

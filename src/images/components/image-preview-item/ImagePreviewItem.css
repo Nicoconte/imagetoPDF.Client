@@ -32,9 +32,39 @@
     border: 1px solid rgb(169, 168, 168);
 }
 
-@media (min-width: 1401px) and (max-width: 1920px) {
+@media (min-width: 1024px) and (max-width: 1367px) {
     .image-preview-item-container {
-        margin-left:20px;
-        margin-top: 20px;
+        width: 215px;
+        height: 310px;        
+        margin-left: 45px;
+        margin-top: 10px;
     }
 }
+
+@media (min-width: 1368px) and (max-width: 1400px) {
+    .image-preview-item-container {
+        width: 215px;
+        height: 310px;            
+        margin-left:50px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1401px) and (max-width: 1452px) {
+    .image-preview-item-container {
+        width: 230px;
+        height: 340px;            
+        margin-left:45px;
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 1453px) and (max-width: 1533px) {
+    .image-preview-item-container {
+        width: 240px;
+        height: 345px;            
+        margin-left:50px;
+        margin-top: 10px;
+    }
+}
+

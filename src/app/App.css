@@ -8,8 +8,20 @@
   height: 100%;
 }
 
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1367px) {
   .app-container {
     height: 657px;
+  }
+}
+
+@media (min-width: 1368px) and (max-width: 1620px) {
+  .app-container {
+    height: 753px;
+  }
+}
+
+@media (min-width: 1630px) and (max-width: 1920px) {
+  .app-container {
+    height: 963px;
   }
 }
